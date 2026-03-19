@@ -1,7 +1,8 @@
+export const dynamic = "force-dynamic";
 import { NextResponse } from "next/server";
 import { getSession } from "@/lib/auth";
 
-const SAMPLE_DATA = [{"carrier":"State Farm","state":"FL","line":"Homeowners","action":"Market Exit","effective_date":"2026-04-01","policies_affected":72000,"premium_impact":890000000,"reason":"Hurricane risk accumulation","replacement_available":False},{"carrier":"Allstate","state":"CA","line":"Auto","action":"Rate Increase","effective_date":"2026-03-15","policies_affected":0,"premium_impact":0,"rate_change_pct":18.4,"reason":"Loss cost inflation","replacement_available":True},{"carrier":"Farmers","state":"TX","line":"Commercial Property","action":"Appetite Expansion","effective_date":"2026-02-01","policies_affected":0,"premium_impact":0,"rate_change_pct":-3.2,"reason":"Market opportunity","replacement_available":True}];
+const SAMPLE_DATA = [{"carrier":"State Farm","state":"FL","line":"Homeowners","action":"Market Exit","effective_date":"2026-04-01","policies_affected":72000,"premium_impact":890000000,"reason":"Hurricane risk accumulation","replacement_available":false},{"carrier":"Allstate","state":"CA","line":"Auto","action":"Rate Increase","effective_date":"2026-03-15","policies_affected":0,"premium_impact":0,"rate_change_pct":18.4,"reason":"Loss cost inflation","replacement_available":true},{"carrier":"Farmers","state":"TX","line":"Commercial Property","action":"Appetite Expansion","effective_date":"2026-02-01","policies_affected":0,"premium_impact":0,"rate_change_pct":-3.2,"reason":"Market opportunity","replacement_available":true}];
 
 function getStats(data: Record<string, unknown>[]) {
   if (!data || data.length === 0) return {};
